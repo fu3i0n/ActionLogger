@@ -1,0 +1,38 @@
+# =========================================
+# Log Viewer GUI Language Configuration
+# =========================================
+
+title: "<#FFD700>Action Logs"
+
+buttons:
+  prev: "<yellow>← Previous"
+  next: "<yellow>Next →"
+  filters: "<#4ECDC4>⚙ Filters"
+  close: "<red>✕ Close"
+
+labels:
+  player: "<gray>Player: <white>{value}"
+  action: "<gray>Action: <white>{value}"
+  detail: "<gray>Detail: <white>{value}"
+  location: "<gray>Location: <white>{value}"
+  timestamp: "<gray>Time: <white>{value}"
+
+messages:
+  teleport_hint: "<gray>Click to teleport"
+  teleport_fail: "<red>Cannot teleport: location unavailable"
+  teleport_success: "<green>Teleported!"
+  page_info: "<gray>Page <white>{page}<gray>/<white>{pages} <gray>• Total: <white>{total}"
+  no_logs: "<red>No logs found for filter"
+  loading: "<yellow>Loading..."
+
+# Action name mapping (action code -> display name with color)
+action_names:
+  0: "<#4ECDC4>Block Placed"
+  1: "<#FF6B6B>Block Broken"
+  4: "<#FFD700>Chat"
+  5: "<#A3E4A1>Command"
+  6: "<#95E1D3>Login"
+  7: "<#FF8B8B>Logout"
+  8: "<#C7CEEA>Item Drop"
+  9: "<#B4D7FF>Item Pickup"
+  99: "<gray>Unknown"

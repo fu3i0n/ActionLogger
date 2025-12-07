@@ -1,9 +1,0 @@
-mysql:
-  host: localhost
-  port: 3306
-  database: minecraft_logs
-  username: logger_user
-  password: serverlogs_password
-dashboard:
-  url: http://localhost:8080
-  port: 8080

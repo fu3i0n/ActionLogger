@@ -1,48 +1,20 @@
 name: ActionLogger
 version: '1.0'
-main: carnage.actionLogger.ActionLogger
+main: cat.daisy.core.Core
 api-version: '1.21'
-description: Logs all player actions to a MySQL database with performance optimizations
-author: 0C4rn4g3
+description: An ActionLogging plugin
+authors: [ Daisy ]
+website: https://daisy.cat
 
-commands:
-  logviewer:
-    description: View action logs for a player
-    usage: /logviewer <playerName> [actionType]
-    permission: actionlogger.view
-    aliases: [logs, viewlogs]
+# Dependencies
+softdepend: [ PlaceholderAPI ]
 
-  dashboard:
-    description: Opens a link to the action logs web dashboard
-    usage: /dashboard
-    permission: actionlogger.dashboard
-    aliases: [actiondashboard, logdash]
+# Libraries - These will be downloaded by the server
+libraries:
+  # Kotlin dependencies
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.21
+  - org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2
 
-  logger:
-    description: ActionLogger management and statistics commands
-    usage: |
-      /logger stats - View performance statistics
-      /logger flush - Force flush queued logs
-      /logger pool - View connection pool stats
-    permission: actionlogger.admin
-
-permissions:
-  actionlogger.view:
-    description: Allows viewing action logs
-    default: op
-
-  actionlogger.dashboard:
-    description: Allows access to the dashboard URL
-    default: op
-
-  actionlogger.admin:
-    description: Allows access to admin commands (/logger)
-    default: op
-
-  actionlogger.*:
-    description: Grants all ActionLogger permissions
-    default: op
-    children:
-      actionlogger.view: true
-      actionlogger.dashboard: true
-      actionlogger.admin: true
+  # Database dependencies
+  - com.zaxxer:HikariCP:7.0.2
+  - org.xerial:sqlite-jdbc:3.51.0.0

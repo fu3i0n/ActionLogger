@@ -1,0 +1,38 @@
+# =========================================
+# Action Logger Settings
+# =========================================
+
+# Enable/disable action logging entirely
+enabled: true
+
+# Max characters stored for detail field (min 32, max 1024)
+detail_max_length: 255
+
+# Queue and batch settings
+queue_capacity: 100000
+batch_flush_interval_ms: 1000
+batch_max_size: 500
+
+# Capture toggles for different action types
+capture:
+  block_place: true
+  block_break: true
+  chat: true
+  command: true
+  container: true
+  login: true
+  logout: true
+  item_drop: true
+  item_pickup: true
+
+# Database index strategy (auto-created on first run)
+database:
+  auto_create_indices: true
+  create_on_playerName_time: true
+  create_on_action: true
+
+# Caching
+cache:
+  recent_players_ttl_seconds: 300
+  recent_players_limit: 50
+

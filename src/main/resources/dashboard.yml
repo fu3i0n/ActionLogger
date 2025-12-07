@@ -1,0 +1,6 @@
+# Dashboard HTTP server settings
+# Restart required after changes
+port: 8080
+
+# Optional token for access control. If non-empty, clients must pass ?token=VALUE
+token: ""

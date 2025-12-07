@@ -1,0 +1,37 @@
+# =========================================
+# Log Viewer GUI Settings
+# =========================================
+
+# Number of logs to display per page (min 9, max 100; defaults to 45 for 6-row chest)
+page_size: 45
+
+# Enable teleportation to log locations
+enable_teleport: true
+
+# Optional: boost player height on teleport to avoid suffocation (blocks)
+teleport_height_boost: 1
+
+# Material for previous/next buttons
+button_previous_material: ARROW
+button_next_material: ARROW
+
+# Material for filter controls
+filter_material: HOPPER
+
+# Material for close button
+close_material: BARRIER
+
+# Slot indices for navigation (0-53 for 6-row chest)
+slot_previous: 46
+slot_next: 52
+slot_filters: 47
+slot_close: 49
+
+# Color theme (hex codes)
+colors:
+  timestamp: "#FFD700"  # gold
+  player: "#FFFFFF"     # white
+  action: "#4ECDC4"     # teal
+  detail: "#4ECDC4"     # teal
+  location: "#4ECDC4"   # teal
+
